@@ -585,6 +585,7 @@ function check_root() {
 function check_os() {
   start_spin "${yellow}${T[063]}${plain}"
   run_step "step_check_os"
+  echo "your OS: ${OS_SYS}"
   if [[ -z "${OS_SYS}" ]]; then
     end_spin "${red}${T[007]} ${T[064]}${plain}" && exit 1
   fi
