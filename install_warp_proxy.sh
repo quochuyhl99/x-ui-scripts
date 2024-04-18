@@ -344,7 +344,7 @@ trap clean_up EXIT TERM SIGHUP SIGTERM SIGKILL
 function get_os_release() {
   local RELEASE_OS=
   local RELEASE_CMD=(
-    "$(grep -i pretty_name /etc/os-release 2>/dev/null | cut -d \" -f2)"
+    "$(grep -i name /etc/os-release 2>/dev/null | cut -d \" -f2)"
     "$(hostnamectl 2>/dev/null | grep -i system | cut -d : -f2)"
     "$(lsb_release -sd 2>/dev/null)"
     "$(grep -i description /etc/lsb-release 2>/dev/null | cut -d \" -f2)"
